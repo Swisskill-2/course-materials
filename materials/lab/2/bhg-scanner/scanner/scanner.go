@@ -40,9 +40,14 @@ func worker(ports, results chan int) {
 // med: easy + return  complex data structure(s?) (maps or slices) containing the ports.
 // hard: restructuring code - consider modification to class/object
 // No matter what you do, modify scanner_test.go to align; note the single test currently fails
+//does this change this
+
+//let's take in a parameter for what ports we are scanning for
+//add a data structure that tells what each port does
+//
 func PortScanner() (string, int) {
 
-	ports := make(chan int, 1024) // TODO 4: TUNE THIS FOR CODEANYWHERE / LOCAL MACHINE (am i doing this right?)
+	ports := make(chan int, 100) // TODO 4: TUNE THIS FOR CODEANYWHERE / LOCAL MACHINE (am i doing this right?)
 	results := make(chan int)
 
 	for i := 0; i < cap(ports); i++ {
